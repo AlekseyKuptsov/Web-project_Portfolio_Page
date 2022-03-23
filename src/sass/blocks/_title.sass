@@ -1,0 +1,33 @@
+.title
+    font-weight: 700
+    color: #000000
+    margin-bottom: 0
+    &_fs48
+        font-size: 48px
+        line-height: 60px
+    &_fs36
+        font-size: 36px
+        line-height: 60px
+        margin-top: 6px
+    &_fs16
+        font-size: 16px
+        line-height: 24px
+        padding-top: 6px
+    &_fs14
+        font-size: 14px
+        line-height: 21px
+    &_fs20
+        font-size: 20px
+        line-height: 30px
+
+    &_section-subtitle
+        text-align: center
+        position: relative
+        z-index: 1
+        @include before_circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+
+    &_section-title
+        text-align: center
