@@ -4,7 +4,8 @@ window.addEventListener('DOMContentLoaded', function () {
         menuLink = document.querySelectorAll('.menu__link'),
         closeElem = document.querySelector('.menu__close'),
         counters = document.querySelectorAll('.skills__ratings-counter'),
-        lines = document.querySelectorAll('.skills__ratings-line span');
+        lines = document.querySelectorAll('.skills__ratings-line span'),
+        pageUp = document.querySelector('.pageup');
 
     hamburger.addEventListener('click', () => {
         activateMenu();
@@ -38,6 +39,16 @@ window.addEventListener('DOMContentLoaded', function () {
 
     counters.forEach((item, i) => {
         lines[i].style.width = item.textContent;
+    });
+
+    //pageup
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 1000) {
+            pageUp.style = 'display: block';
+        } else {
+            pageUp.style = 'display: none';
+        }
     });
 
 
